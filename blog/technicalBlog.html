@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="/styles/main.css" rel="stylesheet" type="text/css">
+        <link href="./styles/main.css" rel="stylesheet" type="text/css">
 </head>
 
 <html>
@@ -17,37 +17,65 @@
             background-color: bisque;
         }
         </style>
-    <h1><strong>Software Testing Life Cycle (STLC)</strong></h1>
+    <h1><strong>Differences between Relative, Absolute, and Fixed Positioning</strong></h1>
 <Body>
-    <p><strong>What is Lifecycle?</strong></p>
+    <p><strong>I am fairly new to web design, and haven’t mastered the differences in positioning of elements.
+         I know there is absolute, fixed, and relative. Are there any others? Also, do they majorly differ? And when should you use which?</strong></p>
 
-    <p>Lifecycle in the simple term refers to the sequence of changes from one form to other forms.
-    These changes can happen to any tangible or intangible things. Every entity has a lifecycle from its inception to retire / demise.<br>
-    
-    In a similar fashion, Software is also an entity. Just like developing software involves a sequence of steps,
-    testing also has steps which should be executed in a definite sequence.<br>
-    
-    This phenomenon of executing the testing activities in a systematic and planned way is called testing life cycle.
-</p>
-    <p><strong>What Is Software Testing Life Cycle (STLC)?</strong></p>
+    <p>An important concept to understand first is that every single element on a web page is a block. Literally a rectangle of pixels.
+         This is easy to understand when you set the element to display: block; or if that element is block-level by default like a (div). 
+         This means you can set a width and a height and that element will respect that. But elements that are display: inline;, like a (span) 
+         by default, are also rectangles, they just flow onto the page differently, lining up horizontally as they can.<br>
 
-    <p>Software Testing Life Cycle refers to a testing process which has specific steps to be executed in a definite sequence to ensure that the quality goals have been met. 
-    In the STLC process, each activity is carried out in a planned and systematic way. Each phase has different goals and deliverables.
-    Different organizations have different phases in STLC; however, the basis remains the same.
-</p><br>
-    
-    <p>Below are the phases of STLC:<br>
-    <ol>
-<li>Requirements phase</li>
-<li>Planning Phase</li>
-<li>Analysis phase</li>
-<li>Design Phase</li>
-<li>Implementation Phase</li>
-<li>Execution Phase</li>
-<li>Conclusion Phase</li>
-<li>Closure Phase</li>
-    </ol>
+        Now that you are picturing every single page element as a block of pixels, we can talk about how positioning is used to
+         get the blocks of pixels exactly where you want them to go.
+        </p><br>
+
 </p>
+    <p><strong>Relative</strong></p>
+
+    <p>This type of positioning is probably the most confusing and misused. What it really means is “relative to itself”. 
+        If you set position: relative; on an element but no other positioning attributes (top, left, bottom or right), it will
+         have no effect on it’s positioning at all, it will be exactly as it would be if you left it as position: static; But if
+          you do give it some other positioning attribute, say, top: 10px;, it will shift its position 10 pixels down from where
+           it would normally be. I’m sure you can imagine, the ability to shift an element around based on its regular position is 
+           pretty useful. I find myself using this to line up form elements many times that have a tendency to not want to line up how I want them to.<br>
+
+        There are two other things that happen when you set position: relative; on an element that you should be aware of. One is that 
+        it introduces the ability to use z-index on that element, which doesn’t work with statically positioned elements. Even if you 
+        don’t set a z-index value, this element will now appear on top of any other statically positioned element. You can’t fight it 
+        by setting a higher z-index value on a statically positioned element.<br>
+        
+        The other thing that happens is it limits the scope of absolutely positioned child elements. Any element that is a child of the
+         relatively positioned element can be absolutely positioned within that block. This brings up some powerful opportunities which 
+         I talk about here.</p><br>
+
+
+    
+    <p><strong>Absolute</strong></p>
+
+    <p>
+        This is a very powerful type of positioning that allows you to literally place any page element exactly where you want it. You use 
+        the positioning attributes top, left, bottom, and right to set the location. Remember that these values will be relative to the next
+         parent element with relative (or absolute) positioning. If there is no such parent, it will default all the way back up to the
+          (html) element itself meaning it will be placed relative to the page itself.<br>
+
+The trade-off (and most important thing to remember) about absolute positioning is that these elements are removed from the flow of elements
+ on the page. An element with this type of positioning is not affected by other elements and it doesn’t affect other elements. This is a serious
+  thing to consider every time you use absolute positioning. Its overuse or improper use can limit the flexibility of your site.</p><br>
+
+  <p><strong>Fixed</strong></p>
+
+  <p>
+    A fixed position element is positioned relative to the viewport, or the browser window itself. The viewport doesn’t change when the window is 
+    scrolled, so a fixed positioned element will stay right where it is when the page is scrolled.This might be used for something like a navigation
+     bar that you want to remain visible at all times regardless of the pages scroll position.
+     The concern with fixed positioning is that it can cause situations where the fixed element overlaps content such that is is inaccessible. 
+     The trick is having enough space to avoid 
+  </p><br>
+
+  
+  
 </Body>
 
 </html>
