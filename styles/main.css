@@ -1,1 +1,45 @@
-@charset "UTF-8";
+
+.sidebar{
+    height:100%;
+    width:240px;
+    position:fixed;
+    z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: black; 
+  overflow-x: hidden; 
+  padding-top: 40px;
+}
+
+.sidebar a {
+  padding: 8px 10px 8px 20px;
+  text-decoration:none ;
+  font-size: 25px;
+  color:lawngreen;
+  display: block;
+}
+.sidebar header{
+  font-size: 30px;
+  color: orange;
+  display: block;
+ 
+}
+
+.main{
+ margin-left: 240px;
+ color:black;
+ font-size: small;
+ font-family: 'Times New Roman', Times, serif;
+ font-style: italic;
+ }
+ 
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+
+  body{
+    background-color:whitesmoke;
+  }
