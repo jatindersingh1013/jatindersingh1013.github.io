@@ -43,3 +43,51 @@
   body{
     background-color:whitesmoke;
   }
+
+  @media (max-width: 320px) 
+  {
+    .sidebar a {
+      font-size: 40px;
+      color:rgb(255, 239, 17);
+    }
+    .sidebar header {
+      font-size: 50px;
+    }
+    .main {
+      font-size: xx-large;
+    }
+  }
+
+  @media (min-width: 768px) 
+  {
+    .sidebar a {
+      font-size: 27px;
+      color:rgb(255, 17, 255);
+    }
+    .sidebar header {
+      font-size: 32px;
+      
+    }
+    .main {
+      font-size: x-large;
+    }
+  }
+
+  @media (min-width: 1200px) 
+  {
+    .sidebar a {
+      font-size: 23px;
+      color:rgb(230, 16, 16);
+    }
+    .sidebar header {
+      font-size: 29px;
+    }
+    .main {
+      font-size: large;
+    }
+  }
+
+
+  
+
+  
